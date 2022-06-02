@@ -4,4 +4,4 @@ docx==0.2.4
 python-docx==0.8.11
 pip==22.1.2
 pywin32==304
-python==3.9
+python==3.5
