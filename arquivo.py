@@ -61,12 +61,12 @@ class Arquivo():
         try:
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
-            inputFile = f"""{nome}.docx"""
+            inputFile = f"""{nome}"""
             # outputFile = f"""{nome}.pdf"""
             # file = open(outputFile, "w")
             # file.close()
             msg = convert(inputFile)
             return "Deu certo"
         except:
-            return  'Escept == '+ str(dirs)
+            return  'Except == '+ str(dirs)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
