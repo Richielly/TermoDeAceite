@@ -60,9 +60,9 @@ class Arquivo():
         try:
             inputFile = f"""{nome}.docx"""
             outputFile = f"""{nome}.pdf"""
-            file = open(outputFile, "w")
-            file.close()
-            msg = convert(inputFile, outputFile)
+            # file = open(outputFile, "w")
+            # file.close()
+            msg = convert(inputFile, outputFile,True)
             return msg
         except:
             return  str('Deu erro')
