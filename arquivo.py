@@ -59,10 +59,10 @@ class Arquivo():
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
             inputFile = f"""{nome}.docx"""
-            outputFile = f"""{nome}.pdf"""
-            file = open(outputFile, "w")
-            file.close()
-            msg = convert(inputFile, outputFile,True)
+            # outputFile = f"""{nome}.pdf"""
+            # file = open(outputFile, "w")
+            # file.close()
+            msg = convert(inputFile)
             return msg
         except:
             return  str('Deu erro')
