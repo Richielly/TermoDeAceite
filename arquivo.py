@@ -65,7 +65,7 @@ class Arquivo():
             outputFile = f"""{nome}.pdf"""
             file = open(outputFile, "w")
             file.close()
-            msg = convert(inputFile)
+            msg = convert(inputFile,outputFile)
             return "Deu certo"
         except:
             return  'Except == '+ str(msg_dir ) + str( dirs)
