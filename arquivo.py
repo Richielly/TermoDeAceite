@@ -62,10 +62,10 @@ class Arquivo():
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
             inputFile = f"""{nome}.docx"""
-            outputFile = f"""{nome}.pdf"""
-            file = open(outputFile, "w")
-            file.close()
-            msg = convert(inputFile,outputFile)
+            # outputFile = f"""{nome}.pdf"""
+            # file = open(outputFile, "w")
+            # file.close()
+            msg = convert(inputFile)
             return dirs
         except:
             return  'Escept == '+ str(dirs)
