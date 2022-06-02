@@ -64,4 +64,4 @@ class Arquivo():
             file.close()
             convert(inputFile, outputFile)
         except:
-            return f"""Depois de clicar no botão abaixo, procure pelo arquivo + {nome} +'.pdf  na pasta de downloads."""
+            return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
