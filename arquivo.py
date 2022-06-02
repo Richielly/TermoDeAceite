@@ -57,8 +57,11 @@ class Arquivo():
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
-        inputFile = f"""{nome}.docx"""
-        outputFile = f"""{nome}.pdf"""
-        file = open(outputFile, "w")
-        file.close()
-        convert(inputFile, outputFile)
+        try:
+            inputFile = f"""{nome}.docx"""
+            outputFile = f"""{nome}.pdf"""
+            file = open(outputFile, "w")
+            file.close()
+            convert(inputFile, outputFile)
+        except:
+            return 'Algo deu errado'

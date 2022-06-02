@@ -63,7 +63,9 @@ with st.form("form"):
         nome_pdf = ""
         arq = Arquivo()
         nome_pdf = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
-        arq.converter(nome_pdf)
+        msg = arq.converter(nome_pdf)
+
+        st.info(msg)
 
         with open(nome_pdf+'.pdf', 'rb') as f:
             PDFbyte = f.read()
