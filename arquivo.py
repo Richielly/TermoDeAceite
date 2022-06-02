@@ -64,5 +64,5 @@ class Arquivo():
             file.close()
             msg = convert(inputFile, outputFile)
         except:
-            return  msg
+            return  str(msg)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
