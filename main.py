@@ -1,5 +1,6 @@
 import streamlit as st
 from arquivo import Arquivo
+import os
 
 st.title("**Termo Aceite**")
 with st.form("form"):
@@ -60,6 +61,8 @@ with st.form("form"):
 
         st.warning(nome_pdf)
         st.error(msg)
+
+        st.success(os.getcwd())
 
         with open(nome_pdf+'.pdf', 'rb') as f:
             PDFbyte = f.read()
