@@ -1,7 +1,7 @@
 import streamlit as st
 from arquivo import Arquivo
-import os
-from time import sleep as t
+
+st.set_page_config(layout="wide")
 
 st.title("**Termo Aceite**")
 with st.form("form"):
