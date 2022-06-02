@@ -66,6 +66,7 @@ class Arquivo():
             file = open(outputFile, "w")
             file.close()
             msg = convert(inputFile,outputFile)
+            convert(os.getcwd())
             return "Deu certo"
         except:
             return  'Except == '+ str(msg_dir ) + str( dirs)
