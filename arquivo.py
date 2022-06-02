@@ -62,6 +62,7 @@ class Arquivo():
             outputFile = f"""{nome}.pdf"""
             file = open(outputFile, "w")
             file.close()
-            convert(inputFile, outputFile)
+            msg = convert(inputFile, outputFile)
         except:
-            return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
+            msg
+            # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
