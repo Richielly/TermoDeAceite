@@ -1,11 +1,11 @@
 from docx2pdf import convert
 from docx import Document
-import pythoncom
+# import pythoncom
 import win32com.client
 import time
 
 class Arquivo():
-    xl=win32com.client.Dispatch("Excel.Application",pythoncom.CoInitialize())
+    # xl=win32com.client.Dispatch("Excel.Application",pythoncom.CoInitialize())
 
     def alterar_doc(self, _cliente, _nrProcesso, _tipoProcesso, _anoProcesso, _contrato, _dia, _mes, _ano, _cidade, _rua, _numero, _sistema, _responsavel, _responsavelImplantacao, _responsavelAssinatura, _responsavelCargo, _responsavelNrDocumento):
         document = Document('PROC001_PROCESSO_DE_CONVERSAO_E_IMPLANTACAO.docx')
