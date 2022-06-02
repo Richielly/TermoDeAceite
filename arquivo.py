@@ -68,5 +68,5 @@ class Arquivo():
             msg = convert(inputFile)
             return "Deu certo"
         except:
-            return  'Except == '+ str(dirs)
+            return  'Except == '+ str(msg_dir + dirs)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
