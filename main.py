@@ -59,6 +59,7 @@ with st.form("form"):
         msg = arq.converter(nome_pdf)
 
         st.warning(nome_pdf)
+        st.error(msg)
 
         with open(nome_pdf+'.pdf', 'rb') as f:
             PDFbyte = f.read()
