@@ -65,5 +65,5 @@ class Arquivo():
             msg = convert(inputFile)
             return msg
         except:
-            return  str('Deu erro')
+            return  str('Deu erro mesmo')
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
