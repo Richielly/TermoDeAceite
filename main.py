@@ -55,14 +55,13 @@ with st.form("form"):
 
     submitted = st.form_submit_button("Enviar")
     if submitted:
-        nome_pdf = ""
         arq = Arquivo()
-        nome_pdf = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
+        nome_doc = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
 
-        with open(f"""{nome_pdf}.docx""", 'rb') as f:
+        with open(nome_doc, 'rb') as f:
             doc = f.read()
 
 if submitted:
 
-    st.download_button(f'Download doc {nome_pdf}', data=doc, file_name=nome_pdf + '.docx', mime='text/plain')
+    st.download_button(f'Download doc {nome_doc}', data=doc, file_name=nome_doc + '.docx', mime='text/plain')
     # st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
