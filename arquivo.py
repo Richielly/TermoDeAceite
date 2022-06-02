@@ -1,7 +1,7 @@
 from docx2pdf import convert
 from docx import Document
 # import pythoncom
-import win32com.client
+# import win32com.client
 import time
 
 class Arquivo():
@@ -56,7 +56,7 @@ class Arquivo():
         return f'TermoScp_{cliente}{unico}'
 
     def converter(self, nome):
-        xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
+        # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         inputFile = f"""{nome}.docx"""
         outputFile = f"""{nome}.pdf"""
         file = open(outputFile, "w")
