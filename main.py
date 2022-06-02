@@ -66,7 +66,7 @@ with st.form("form"):
 
         st.success(os.getcwd())
 
-        with open('TermoScp_Manoel Ribas1654174981981246.pdf', 'rb') as f:
+        with open(f"""{nome_pdf}.pdf'""", 'rb') as f:
             PDFbyte = f.read()
 
 if submitted:
