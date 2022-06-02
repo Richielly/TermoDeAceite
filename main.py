@@ -1,13 +1,6 @@
 import streamlit as st
 from arquivo import Arquivo
-from PIL import Image
 
-#         sistema = 'Conabilidate Pública'
-#         responsavel = 'Marcos'
-#         tipoProcesso = 'dispensa'
-#         nrProcesso = '36'
-#         anoProcesso = '2022'
-#
 st.title("**Termo Aceite**")
 with st.form("form"):
     st.write("**Informações da entidade**")
@@ -71,5 +64,4 @@ with st.form("form"):
             PDFbyte = f.read()
 
 if submitted:
-    st.info('Depois de clicar no botão abaixo, procure pelo arquivo "' + nome_pdf + '.pdf" na pasta de downloads.')
     st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.pdf', mime='application/octet-stream')
