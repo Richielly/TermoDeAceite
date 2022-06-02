@@ -1,6 +1,7 @@
 import streamlit as st
 from arquivo import Arquivo
 import os
+from time import sleep as t
 
 st.title("**Termo Aceite**")
 with st.form("form"):
@@ -57,6 +58,7 @@ with st.form("form"):
         nome_pdf = ""
         arq = Arquivo()
         nome_pdf = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
+        t(5)
         msg = arq.converter(nome_pdf)
 
         st.warning(nome_pdf)
@@ -68,4 +70,5 @@ with st.form("form"):
             PDFbyte = f.read()
 
 if submitted:
+    t(5)
     st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.pdf', mime='application/octet-stream')
