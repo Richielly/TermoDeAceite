@@ -52,7 +52,7 @@ class Arquivo():
 
         unico = (str(time.time()).replace('.',''))
 
-        document.save(f"""TermoScp_{unico}.docx""")
+        document.save(f"""TermoScp_.docx""")
 
         return f'TermoScp_{unico}'
 
