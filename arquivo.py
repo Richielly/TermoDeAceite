@@ -54,7 +54,7 @@ class Arquivo():
 
         document.save(f"""TermoScp_.docx""")
 
-        return f'TermoScp_{unico}'
+        return f'TermoScp_'
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
