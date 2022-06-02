@@ -23,7 +23,7 @@ with st.form("form"):
         col1, col2 = st.columns(2)
         with col1:
             cliente = st.text_input("Nome Cliente")
-            tipoProcesso = st.text_input("Tipo Processo")
+            tipoProcesso = st.text_input("Modalidade")
         with col2:
             nrProcesso = st.text_input("Número Processo")
         with col2:
