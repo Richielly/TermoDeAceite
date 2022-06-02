@@ -59,17 +59,10 @@ with st.form("form"):
         arq = Arquivo()
         nome_pdf = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
 
-        msg = arq.converter(nome_pdf)
-
-        st.warning(nome_pdf)
-        st.error(msg)
-
-        st.success(os.getcwd())
-
         with open(f"""{nome_pdf}.docx""", 'rb') as f:
             doc = f.read()
 
 if submitted:
 
-    st.download_button('Download pdf', data=doc, file_name=nome_pdf + '.docx', mime='text/plain')
+    st.download_button(f'Download doc {nome_pdf}', data=doc, file_name=nome_pdf + '.docx', mime='text/plain')
     # st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')

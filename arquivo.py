@@ -52,9 +52,9 @@ class Arquivo():
 
         unico = (str(time.time()).replace('.',''))
 
-        document.save(f"""TermoScp{unico}.docx""")
+        document.save(f"""Termo{sistema}{unico}.docx""")
 
-        return f"""TermoScp{unico}"""
+        return f"""Termo{sistema}{unico}.docx"""
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
@@ -67,7 +67,6 @@ class Arquivo():
             file.close()
             msg = convert(inputFile,outputFile)
             convert(os.getcwd())
-            return "Deu certo"
+            return True
         except:
-            return  'Except == '+ str(msg_dir ) + str( dirs)
-            # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
+            return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
