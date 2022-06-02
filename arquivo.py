@@ -52,9 +52,9 @@ class Arquivo():
 
         unico = (str(time.time()).replace('.',''))
 
-        document.save(f"""TermoScp_.docx""")
+        document.save(f"""TermoScpxxxxxxx_.docx""")
 
-        return f'TermoScp_'
+        return f'TermoScpxxxxxxx_'
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
@@ -62,9 +62,9 @@ class Arquivo():
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
             inputFile = f"""{nome}.docx"""
-            # outputFile = f"""{nome}.pdf"""
-            # file = open(outputFile, "w")
-            # file.close()
+            outputFile = f"""{nome}.pdf"""
+            file = open(outputFile, "w")
+            file.close()
             msg = convert(inputFile)
             return dirs
         except:
