@@ -66,10 +66,10 @@ with st.form("form"):
 
         st.success(os.getcwd())
 
-        # with open(f"""{nome_pdf}.docx""", 'rb') as f:
-        #     PDFbyte = f.read()
+        with open(f"""{nome_pdf}.docx""", 'rb') as f:
+            doc = f.read()
 
 if submitted:
 
-    st.download_button('Download doc', file_name=nome_pdf + '.docx', mime='text/plain')
+    st.download_button('Download pdf', data=doc, file_name=nome_pdf + '.docx', mime='text/plain')
     # st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
