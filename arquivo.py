@@ -1,7 +1,7 @@
 from docx2pdf import convert
 from docx import Document
-import pythoncom
-import win32com.client
+# import pythoncom
+# import win32com.client
 import time
 import os
 
@@ -57,7 +57,7 @@ class Arquivo():
         return f'TermoScpxxxxxxx_'
 
     def converter(self, nome):
-        xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
+        # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
