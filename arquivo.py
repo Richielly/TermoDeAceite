@@ -60,12 +60,13 @@ class Arquivo():
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
             msg_dir = os.getcwd()
+            dirs = os.listdir(msg_dir)
             inputFile = f"""{nome}.docx"""
             # outputFile = f"""{nome}.pdf"""
             # file = open(outputFile, "w")
             # file.close()
             msg = convert(inputFile)
-            return msg_dir +'##'+ nome
+            return dirs
         except:
-            return  str(msg_dir +'##'+ nome)
+            return  str(dirs)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
