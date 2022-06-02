@@ -52,9 +52,9 @@ class Arquivo():
 
         unico = (str(time.time()).replace('.',''))
 
-        document.save(f"""TermoScpxxxxxxx_.docx""")
+        document.save(f"""TermoScpxxxxxxx.docx""")
 
-        return f'TermoScpxxxxxxx_'
+        return f'TermoScpxxxxxxx'
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
