@@ -3,6 +3,7 @@ from docx import Document
 # import pythoncom
 # import win32com.client
 import time
+import os
 
 class Arquivo():
     # xl=win32com.client.Dispatch("Excel.Application",pythoncom.CoInitialize())
@@ -58,12 +59,13 @@ class Arquivo():
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
+            msg_dir = os.getcwd()
             inputFile = f"""{nome}.docx"""
             # outputFile = f"""{nome}.pdf"""
             # file = open(outputFile, "w")
             # file.close()
             msg = convert(inputFile)
-            return nome
+            return msg_dir +'##'+ nome
         except:
-            return  str(nome)
+            return  str(msg_dir +'##'+ nome)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
