@@ -62,9 +62,9 @@ class Arquivo():
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
             inputFile = f"""{nome}.docx"""
-            # outputFile = f"""{nome}.pdf"""
-            # file = open(outputFile, "w")
-            # file.close()
+            outputFile = f"""{nome}.pdf"""
+            file = open(outputFile, "w")
+            file.close()
             msg = convert(inputFile)
             return "Deu certo"
         except:
