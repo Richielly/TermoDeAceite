@@ -63,7 +63,7 @@ class Arquivo():
             # file = open(outputFile, "w")
             # file.close()
             msg = convert(inputFile)
-            return msg
+            return nome
         except:
-            return  str('Deu erro mesmo')
+            return  str(nome)
             # return f"""Depois de clicar no botão abaixo, procure pelo arquivo {nome}'.pdf  na pasta de downloads."""
