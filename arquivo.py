@@ -54,14 +54,14 @@ class Arquivo():
 
         document.save(f"""TermoScp{unico}.docx""")
 
-        return f"""TermoScp{unico}.docx"""
+        return f"""TermoScp{unico}"""
 
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
             msg_dir = os.getcwd()
             dirs = os.listdir(msg_dir)
-            inputFile = f"""{nome}"""
+            inputFile = f"""{nome}.docx"""
             # outputFile = f"""{nome}.pdf"""
             # file = open(outputFile, "w")
             # file.close()
