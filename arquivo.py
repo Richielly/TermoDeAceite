@@ -52,7 +52,7 @@ class Arquivo():
 
         unico = (str(time.time()).replace('.',''))
 
-        nome = f"""Termo{cidade}{sistema}{unico}.docx""".strip()
+        nome = f"""Termo{cidade}{sistema}_{unico}.docx""".strip()
 
         document.save(nome)
 

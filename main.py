@@ -63,5 +63,5 @@ with st.form("form"):
 
 if submitted:
 
-    st.download_button(f'Download doc {nome_doc}', data=doc, file_name=nome_doc + '.docx', mime='text/plain')
+    st.download_button(f'Download doc {nome_doc}', data=doc, file_name=nome_doc, mime='text/plain')
     # st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
