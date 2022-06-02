@@ -71,4 +71,4 @@ with st.form("form"):
 
 if submitted:
     t(5)
-    st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.pdf', mime='application/octet-stream')
+    st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
