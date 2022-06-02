@@ -58,7 +58,7 @@ with st.form("form"):
         nome_pdf = ""
         arq = Arquivo()
         nome_pdf = arq.alterar_doc(cliente, nrProcesso, tipoProcesso, anoProcesso, contrato, dia, mes, ano, cidade, rua, numero, sistema, responsavel, responsavelImplantacao, responsavelAssinatura,responsavelCargo, responsavelNrDocumento)
-        t(5)
+
         msg = arq.converter(nome_pdf)
 
         st.warning(nome_pdf)
@@ -66,9 +66,10 @@ with st.form("form"):
 
         st.success(os.getcwd())
 
-        with open(f"""{nome_pdf}.docx""", 'rb') as f:
-            PDFbyte = f.read()
+        # with open(f"""{nome_pdf}.docx""", 'rb') as f:
+        #     PDFbyte = f.read()
 
 if submitted:
-    t(5)
-    st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
+
+    st.download_button('Download doc', file_name=nome_pdf + '.docx', mime='text/plain')
+    # st.download_button('Download pdf', data=PDFbyte, file_name=nome_pdf + '.docx', mime='application/octet-stream')
