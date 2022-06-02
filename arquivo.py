@@ -60,15 +60,10 @@ class Arquivo():
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
             msg_dir = os.getcwd()
-            print('1')
             dirs = os.listdir(msg_dir)
-            print('2')
             inputFile = f"""{nome}.docx"""
-            print('3')
             outputFile = f"""{nome}.pdf"""
-            print('4')
             file = open(outputFile, "w")
-            print('5')
             file.close()
             msg = convert(inputFile,outputFile)
             convert(os.getcwd())

@@ -66,7 +66,7 @@ with st.form("form"):
 
         st.success(os.getcwd())
 
-        with open(f"""{nome_pdf}.pdf'""", 'rb') as f:
+        with open(f"""{nome_pdf}.docx""", 'rb') as f:
             PDFbyte = f.read()
 
 if submitted:
