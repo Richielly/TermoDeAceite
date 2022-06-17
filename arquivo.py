@@ -58,6 +58,51 @@ class Arquivo():
 
         return nome
 
+    def alterar_doc_treinamento(self, _dia, _mes, _ano, _cidade, _rua, _numero, _sistema, _responsavel, _responsavelImplantacao, _responsavelAssinatura, _responsavelCargo, _responsavelNrDocumento):
+        document = Document('PROC002_PROCESSO_DE_TREINAMENTO_E_ENTREGA.docx')
+
+        dia = _dia
+        mes = _mes
+        ano = _ano
+        cidade = _cidade
+        rua = _rua
+        numero = _numero
+        sistema = _sistema
+        responsavel = _responsavel
+        responsavelImplantacao = _responsavelImplantacao
+        responsavelAssinatura = _responsavelAssinatura
+        responsavelCargo = _responsavelCargo
+        responsavelNrDocumento = _responsavelNrDocumento
+
+        parag_8 = document.paragraphs[8]
+        parag_8.text = str(parag_8.text).replace('{$dia}',dia).replace('{$mes}',mes).replace('{$ano}',ano).replace('{$cidade}',cidade).replace('{$rua}',rua).replace('{$numero}',numero).replace('{$sistema}',sistema).replace('{$responsavel}',responsavel)
+
+        parag_10 = document.paragraphs[10]
+        parag_10.text = str(parag_10.text).replace('{$sistema}', sistema).replace('{$cidade}', cidade)
+
+        parag_17 = document.paragraphs[17]
+        parag_17.text = str(parag_17.text).replace('{$responsavelImplantacao}',responsavelImplantacao)
+
+        parag_18 = document.paragraphs[21]
+        parag_18.text = str(parag_18.text).replace('{$responsavelAssinatura}', responsavelAssinatura)
+
+        parag_ = document.paragraphs[23]
+        print(parag_.text)
+
+        parag_22 = document.paragraphs[22]
+        parag_22.text = str(parag_22.text).replace('{$responsavelCargo}', responsavelCargo)
+
+        parag_23 = document.paragraphs[23]
+        parag_23.text = str(parag_23.text).replace('{$responsavelNrDocumento}', responsavelNrDocumento)
+
+        unico = (str(time.time()).replace('.',''))
+
+        nome = f"""Termo{cidade}{sistema}_{unico}.docx""".strip()
+
+        document.save(nome)
+
+        return nome
+
     def converter(self, nome):
         # xl = win32com.client.Dispatch("Excel.Application", pythoncom.CoInitialize())
         try:
