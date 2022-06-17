@@ -72,8 +72,6 @@ if documento == 'Conversão' :
 if documento == 'Treinamento' :
     st.title("**Termo Aceite Treinamento**")
     with st.form("form"):
-        st.write("**Informações da entidade**")
-        container_1 = st.container()
         st.write("**Informações no corpo do termo**")
         container_2 = st.container()
         st.write("**Informações assinaturas responsável conversão/treinamento**")
