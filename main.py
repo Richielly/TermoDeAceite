@@ -81,10 +81,6 @@ if documento == 'Treinamento' :
         st.write("**Informações assinaturas cliente**")
         container_4 = st.container()
 
-        with container_1:
-            col1, col2 = st.columns(2)
-            with col1:
-                cliente = st.text_input("Nome Cliente")
         with container_2:
             col1, col2, col3, col4 = st.columns(4)
             with col1:
